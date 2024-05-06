@@ -1,0 +1,36 @@
+Factory pattern vs Abstract factory pattern
+===========================================
+
+Factory Pattern :
+-----------------
+1. When we have to create object on conditional basis, will use factory pattern.
+
+Shape interface
+        ||
+         ==> void draw()
+            /        \      
+           /          \     
+        circle     rectengle
+
+Abstract Factory Pattern
+------------------------
+1. It is factory of factory
+
+Vechile interface
+        ||
+         ==> getVechile()  - Factory 1
+              /     \
+             /       \
+            /         \
+           /           \
+          /             \
+       Luxury        Ordinary - Factory 2
+       Vechile       Vechile
+       /  \              /  \
+      /    \            /    \
+     /      \          /      \
+   Swift   Hyundai   BMW     Audi
+
+Here we will create 2 factory 
+one will give product which is car, be it Hyundai, swift, BMW, Audi
+second factory(Vechile Factory) will give type of vechile
